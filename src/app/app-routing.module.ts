@@ -10,6 +10,10 @@ const routes: Routes = [
         (m) => m.VisualRecognitionModule
       ),
   },
+  {
+    path: '**',
+    redirectTo: '',
+  },
 ];
 
 @NgModule({
