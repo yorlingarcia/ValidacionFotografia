@@ -4,9 +4,17 @@ import { CommonModule } from '@angular/common';
 import { VisualRecognitionRoutingModule } from './visual-recognition-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { TomarFotoComponent } from './components/tomar-foto/tomar-foto.component';
+import { TomarFoto2Component } from './components/tomar-foto2/tomar-foto2.component';
+import { WebcamModule } from 'ngx-webcam';
 
 @NgModule({
-  declarations: [HomeComponent, LayoutComponent],
-  imports: [CommonModule, VisualRecognitionRoutingModule],
+  declarations: [
+    HomeComponent,
+    LayoutComponent,
+    TomarFotoComponent,
+    TomarFoto2Component,
+  ],
+  imports: [CommonModule, VisualRecognitionRoutingModule, WebcamModule],
 })
 export class VisualRecognitionModule {}

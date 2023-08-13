@@ -1,0 +1,16 @@
+<div>
+  <video #videoElement autoplay playsinline controls></video>
+</div>
+<div>
+  <button (click)="capturePhoto()">Capture Photo</button>
+</div>
+<canvas #canvasElement></canvas>
+<div class="flex flex-row">
+  <a
+    *ngFor="let image of imageData"
+    [href]="image"
+    download="nombre-de-la-imagen.jpg"
+  >
+    <img [src]="image" alt="" style="object-fit: contain" />
+  </a>
+</div>
