@@ -1,8 +1,13 @@
 <div class="container mx-auto">
   <div class="flex flex-row justify-around">
-    <button>Tomar una fotografia</button>
+    <button *ngIf="!statusComponent; else toggle" (click)="openComponent()">
+      Tomar una fotografia
+    </button>
+    <ng-template #toggle>
+      <button (click)="openComponent()">Cerrar camera</button>
+    </ng-template>
     <button>Subir un archivo</button>
   </div>
 </div>
 <!-- <app-tomar-foto></app-tomar-foto> -->
-<app-tomar-foto2></app-tomar-foto2>
+<app-tomar-foto2 *ngIf="statusComponent"></app-tomar-foto2>
