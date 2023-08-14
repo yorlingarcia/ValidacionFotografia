@@ -19,7 +19,9 @@
   <div class="swiper-wrapper">
     <!-- Slides -->
     <div *ngFor="let image of imageData" class="swiper-slide">
-      <img [src]="image" style="object-fit: contain" />
+      <a [href]="image" download="nombre-de-la-imagen.jpg">
+        <img [src]="image" alt="" style="object-fit: contain" />
+      </a>
     </div>
     <div class="swiper-slide">Your captured image will appear here...</div>
   </div>

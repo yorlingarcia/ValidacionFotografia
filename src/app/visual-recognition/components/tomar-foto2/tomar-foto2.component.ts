@@ -17,7 +17,9 @@ export class TomarFoto2Component implements AfterViewInit {
 
   captureImage = '';
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.imageData.length);
+  }
 
   /*------------------------------------------
     --------------------------------------------
@@ -36,7 +38,7 @@ export class TomarFoto2Component implements AfterViewInit {
   public handleImage(webcamImage: WebcamImage) {
     this.webcamImage = webcamImage;
     this.captureImage = webcamImage!.imageAsDataUrl;
-    console.info('received webcam image', this.captureImage);
+    // console.info('received webcam image', this.captureImage);
     this.imageData.push(this.captureImage);
   }
 
